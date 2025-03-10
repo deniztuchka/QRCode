@@ -12,5 +12,10 @@
         <input type="text" name="text" required>
         <button type="submit">Generate QR Code</button>
     </form>
+
+    {% if qr_code %}
+        <h3>Generated QR Code:</h3>
+        <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code">
+    {% endif %}
 </body>
 </html>
